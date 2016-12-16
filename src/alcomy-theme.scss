@@ -1,0 +1,50 @@
+@import '~@angular/material/core/theming/all-theme';
+// Plus imports for other components in your app.
+
+// Include the base styles for Angular Material core. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+@include md-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$alcomy-app-primary: md-palette($md-light-blue);
+$alcomy-app-accent:  md-palette($md-amber, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$alcomy-app-warn:    md-palette($md-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$alcomy-app-theme: md-light-theme($alcomy-app-primary, $alcomy-app-accent, $alcomy-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($alcomy-app-theme);
+
+.residents-theme {
+  $residents-primary: md-palette($md-red);
+  $residents-accent: md-palette($md-amber);
+  $residents-warm: md-palette($md-red);
+  $residents-theme: md-light-theme($residents-primary, $residents-accent, $residents-warm);
+
+  @include angular-material-theme($residents-theme)
+}
+
+.staff-theme {
+  $staff-primary: md-palette($md-amber);
+  $staff-accent: md-palette($md-cyan);
+  $staff-warm: md-palette($md-red);
+  $staff-theme: md-light-theme($staff-primary, $staff-accent, $staff-warm);
+
+  @include angular-material-theme($staff-theme)
+}
+
+.company-theme {
+  $company-primary: md-palette($md-green);
+  $company-accent: md-palette($md-light-blue);
+  $company-warm: md-palette($md-red);
+  $company-theme: md-light-theme($company-primary, $company-accent, $company-warm);
+
+  @include angular-material-theme($company-theme)
+}

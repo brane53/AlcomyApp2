@@ -18,7 +18,8 @@
       "prefix": "alc",
       "mobile": false,
       "styles": [
-        "styles.scss"
+        "styles.scss",
+        "alcomy-theme.scss"
       ],
       "scripts": [],
       "environments": {

@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'alc-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
+  
 })
 export class AppComponent {
-  title = 'alc works!';
+  
 }

@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from '@angular/material'
-import { FlexLayoutModule } from '@angular/flex-layout'
+import { MaterialModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { WorkspaceRoutingModule } from './workspace-routing.module'
-import { ResidentsModule } from '../residents/residents.module'
+import { WorkspaceRoutingModule } from './workspace-routing.module';
 
 import { WorkspaceComponent } from './workspace.component';
 
@@ -14,7 +13,6 @@ import { WorkspaceComponent } from './workspace.component';
   imports: [
     CommonModule,
     WorkspaceRoutingModule,
-    ResidentsModule,
     MaterialModule.forRoot(),
     FlexLayoutModule.forRoot()
   ],

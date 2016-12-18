@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { WorkspaceComponent } from './workspace.component'
-import { ResidentsComponent } from '../residents/residents.component'
-import { ResidentsModule } from '../residents/residents.module'
+import { WorkspaceComponent } from './workspace.component';
 
 const workspaceRoutes: Routes = [
   {
-    path: "",
+    path: '',
     component: WorkspaceComponent,
     children: [
       {
-        path: "residents",
-        loadChildren: () => ResidentsModule
+        path: 'residents',
+        loadChildren: 'app/residents/residents.module#ResidentsModule'
+      },
+      {
+        path: 'dashboard',
+        loadChildren: 'app/dashboard/dashboard.module#DashboardModule'
       }
     ]
   }

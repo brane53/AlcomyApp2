@@ -27,5 +27,7 @@
   ],
   "vsicons.dontShowNewVersionMessage": true,
   "typescript.check.workspaceVersion": false,
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+
+  "editor.renderLineHighlight": "all"
 }

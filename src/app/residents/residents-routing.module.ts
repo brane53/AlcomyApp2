@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { residentRoutes } from './residents.routes'
+import { residentRoutes } from './residents.routing'
 
 
 @NgModule({

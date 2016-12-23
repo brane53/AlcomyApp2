@@ -1,4 +1,7 @@
 @import '~@angular/material/core/theming/all-theme';
+@import '~@angular/material/core/theming/theming';
+@import '~@angular/material/core/theming/palette';
+@import 'alcomy-themes-all';
 // Plus imports for other components in your app.
 
 // Include the base styles for Angular Material core. We include this here so that you only
@@ -21,30 +24,40 @@ $alcomy-app-theme: md-light-theme($alcomy-app-primary, $alcomy-app-accent, $alco
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($alcomy-app-theme);
+@include alcomy-theme($alcomy-app-theme);
 
 .residents-theme {
+  // The palettes that will make up the resident theme
   $residents-primary: md-palette($md-red);
   $residents-accent: md-palette($md-amber);
   $residents-warm: md-palette($md-red);
+  // The residents theme is a light theme and is made up of the previous palettes.
   $residents-theme: md-light-theme($residents-primary, $residents-accent, $residents-warm);
 
-  @include angular-material-theme($residents-theme)
+  @include angular-material-theme($residents-theme);
+  @include alcomy-theme($residents-theme);
 }
 
 .staff-theme {
+  // The palettes that will make up the staff theme
   $staff-primary: md-palette($md-amber);
   $staff-accent: md-palette($md-cyan);
   $staff-warm: md-palette($md-red);
+  // The staff theme is a light theme and is made up of the previous palettes.
   $staff-theme: md-light-theme($staff-primary, $staff-accent, $staff-warm);
 
-  @include angular-material-theme($staff-theme)
+  @include angular-material-theme($staff-theme);
+  @include alcomy-theme($staff-theme);
 }
 
 .company-theme {
+  // The palettes that will make up the company theme
   $company-primary: md-palette($md-green);
   $company-accent: md-palette($md-light-blue);
   $company-warm: md-palette($md-red);
+  // The company theme is a light theme and is made up of the previous palettes.
   $company-theme: md-light-theme($company-primary, $company-accent, $company-warm);
 
-  @include angular-material-theme($company-theme)
+  @include angular-material-theme($company-theme);
+  @include alcomy-theme($company-theme);
 }

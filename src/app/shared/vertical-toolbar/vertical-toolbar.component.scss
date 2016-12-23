@@ -1,0 +1,47 @@
+@import '~@angular/material/core/style/_variables';
+
+$alc-vertical-toolbar-width-desktop: 48px !default;
+$alc-vertical-toolbar-width-mobile-portrait: 48px !default;
+$alc-vertical-toolbar-width-mobile-landscape: 56px !default;
+
+$alc-vertical-toolbar-font-size: 14px !default;
+$alc-vertical-toolbar-padding: 16px 0 !default;
+
+
+@mixin alc-vertical-toolbar-width($width) {
+  :host {
+    min-width: $width;
+  }
+}
+
+:host {
+  display: flex;
+  box-sizing: border-box;
+
+  height: 100%;
+
+  // Font Styling
+  font-size: $alc-vertical-toolbar-font-size;
+  font-weight: 400;
+  font-family: $md-font-family;
+
+  padding: $alc-vertical-toolbar-padding;
+
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+// Set the default height for the toolbar.
+@include alc-vertical-toolbar-width($alc-vertical-toolbar-width-desktop);
+
+// Specific height for mobile devices in portrait mode.
+@media ($md-xsmall) and (orientation: portrait) {
+  @include alc-vertical-toolbar-width($alc-vertical-toolbar-width-mobile-portrait);
+}
+
+// Specific height for mobile devices in landscape mode.
+@media ($md-xsmall) and (orientation: landscape) {
+  @include alc-vertical-toolbar-width($alc-vertical-toolbar-width-mobile-landscape);
+}

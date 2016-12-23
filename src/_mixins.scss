@@ -1,0 +1,17 @@
+
+// Makes a flex container out of a module's content or the component that gets loaded
+// into the module content area beneath the  main navigation. Used in residents.component,
+// dashboard.component, staff.component, etc.
+@mixin module-content($direction){
+  $display: flex;
+  $flex: 1;
+  $box-sizing: border-box;
+
+  :host {
+    display: $display;
+    flex-direction: $direction;
+    flex: $flex;
+    box-sizing: border-box;
+  }
+
+}

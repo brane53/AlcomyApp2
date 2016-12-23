@@ -1,13 +1,11 @@
-<div [class]="theme">
+<div id="workspace-wrapper" [class]="theme">
   <md-toolbar color="primary">
     <div fx-flex="56px"></div>
-    <button md-button >DASHBOARD</button>
-    <button md-button routerLink="/residents">RESIDENTS</button>
-    <button md-button >STAFF</button>
-    <button md-button >COMPANY</button>
+    <button md-button (click)="changeTheme('')" routerLink="/dashboard/tasks">DASHBOARD</button>
+    <button md-button (click)="changeTheme('residents-theme')" routerLink="/residents/list">RESIDENTS</button>
+    <button md-button (click)="changeTheme('staff-theme')" >STAFF</button>
+    <button md-button (click)="changeTheme('company-theme')" >COMPANY</button>
   </md-toolbar>
-
-
 
   <router-outlet></router-outlet>
 

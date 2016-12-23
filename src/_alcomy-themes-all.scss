@@ -1,0 +1,6 @@
+@import 'app/shared/vertical-toolbar/vertical-toolbar-theme';
+
+
+@mixin alcomy-theme($theme){
+  @include alc-vertical-toolbar-theme($theme);
+}

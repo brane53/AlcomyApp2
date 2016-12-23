@@ -19,7 +19,7 @@
       "mobile": false,
       "styles": [
         "styles.scss",
-        "alcomy-theme.scss"
+        "alcomy-themes.scss"
       ],
       "scripts": [],
       "environments": {

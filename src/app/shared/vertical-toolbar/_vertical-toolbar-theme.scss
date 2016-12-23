@@ -1,0 +1,37 @@
+// Import all the tools needed to customize the theme and extract parts of it
+@import '~@angular/material/core/theming/palette';
+@import '~@angular/material/core/theming/theming';
+
+// Define a mixin that accepts a theme and outputs the color styles for the component.
+@mixin alc-vertical-toolbar-theme($theme) {
+  // Extract whichever individual palettes you need from the theme.
+
+  $primary: map-get($theme, primary);         // primary color palette
+  $accent: map-get($theme, accent);           // accent color palette
+  $warn: map-get($theme, warn);               // warm color palette
+  $background: map-get($theme, background);   // background color palette
+  $foreground: map-get($theme, foreground);   // foreground color palette
+
+  // Use md-color to extract individual colors from a palette as necessary.
+  alc-vertical-toolbar {
+    background-color: md-color($md-grey, 900); // is $background a palette
+    //color: md-color($md-dark-theme-foreground, text);
+
+    md-icon {
+      color: md-color($md-dark-theme-foreground, disabled-button);
+      
+    }
+    
+    //styles for button states
+    button {
+      &:hover md-icon {
+        color: md-color($primary, 200);
+      }
+      &.active md-icon {
+        color: md-color($primary);
+      }
+    }
+
+    
+  }
+}

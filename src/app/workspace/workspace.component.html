@@ -1,11 +1,12 @@
 <div id="workspace-wrapper" [class]="theme">
   <md-toolbar class="main-toolbar" color="primary">
     <!--Menu Button-->
-    <div fxFlex="48px" fxLayout="row" fxLayoutAlign="center center">
+    <div fxHide="false" fxHide.gt-xs fxFlex="48px" fxLayout="row" fxLayoutAlign="center center">
       <button md-icon-button>
         <md-icon class="md-24">menu</md-icon>
       </button>
     </div>
+    <span fxShow="<false></false>" fxShow.gt-xs fxFlex="48px"></span>
     <!--Dashboard Button-->
     <a md-button fxHide="false" fxHide.xs (click)="changeTheme('')" routerLink="/dashboard/tasks">
       DASHBOARD

@@ -21,9 +21,9 @@
       color: md-color($md-dark-theme-foreground, disabled-button);
       
     }
-    
+
     //styles for button states
-    button {
+    button, a {
       &:hover md-icon {
         color: md-color($primary, 200);
       }

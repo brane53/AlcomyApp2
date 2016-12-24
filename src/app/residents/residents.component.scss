@@ -1,3 +1,5 @@
+@import '~@angular/material/core/style/variables';
 @import '../../mixins';
 
-@include module-content(row);
+@include module-content();
+

@@ -1,11 +1,18 @@
-@import '~@angular/material/core/style/_variables';
+@import '~@angular/material/core/style/variables';
 
+$alc-vertical-toolbar-height-desktop: 100% !default;
 $alc-vertical-toolbar-width-desktop: 48px !default;
-$alc-vertical-toolbar-width-mobile-portrait: 48px !default;
-$alc-vertical-toolbar-width-mobile-landscape: 56px !default;
+
+$alc-vertical-toolbar-height-mobile-portrait: 48px !default;
+$alc-vertical-toolbar-width-mobile-portrait: 100% !default;
+
+$alc-vertical-toolbar-height-mobile-landscape: 100% !default;
+$alc-vertical-toolbar-width-mobile-landscape: 48px !default;
+
 
 $alc-vertical-toolbar-font-size: 14px !default;
 $alc-vertical-toolbar-padding: 16px 0 !default;
+$alc-vertical-toolbar-padding-horizontal: 8px 16px !default;
 
 
 @mixin alc-vertical-toolbar-width($width) {
@@ -14,34 +21,59 @@ $alc-vertical-toolbar-padding: 16px 0 !default;
   }
 }
 
+@mixin alc-vertical-toolbar-height($height) {
+  :host {
+    min-height: $height;
+  }
+}
+
+@mixin alc-vertical-toolbar-orientation($orientation){
+  :host {
+    display: flex;
+    @if $orientation == vertical {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: $alc-vertical-toolbar-padding;
+    }
+    @else if $orientation == horizontal {
+      flex-direction: row;
+      justify-content: space-around;
+      padding: $alc-vertical-toolbar-padding-horizontal;
+      
+    }
+    
+  }
+  
+}
+
 :host {
   display: flex;
+  align-items: center;
+
   box-sizing: border-box;
-
-  height: 100%;
-
   // Font Styling
   font-size: $alc-vertical-toolbar-font-size;
   font-weight: 400;
   font-family: $md-font-family;
-
-  padding: $alc-vertical-toolbar-padding;
-
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  
 
 }
 
 // Set the default height for the toolbar.
+@include alc-vertical-toolbar-height($alc-vertical-toolbar-height-desktop);
 @include alc-vertical-toolbar-width($alc-vertical-toolbar-width-desktop);
+@include alc-vertical-toolbar-orientation(vertical);
 
-// Specific height for mobile devices in portrait mode.
+// Specific height, width and orientation for mobile devices in portrait mode.
 @media ($md-xsmall) and (orientation: portrait) {
+  @include alc-vertical-toolbar-height($alc-vertical-toolbar-height-mobile-portrait);
   @include alc-vertical-toolbar-width($alc-vertical-toolbar-width-mobile-portrait);
+  @include alc-vertical-toolbar-orientation(horizontal);
 }
 
-// Specific height for mobile devices in landscape mode.
+// Specific height, width and orientation for mobile devices in landscape mode.
 @media ($md-xsmall) and (orientation: landscape) {
+  @include alc-vertical-toolbar-height($alc-vertical-toolbar-height-mobile-landscape);
   @include alc-vertical-toolbar-width($alc-vertical-toolbar-width-mobile-landscape);
+  @include alc-vertical-toolbar-orientation(vertical);
 }

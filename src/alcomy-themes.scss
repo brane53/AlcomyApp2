@@ -12,7 +12,7 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
 $alcomy-app-primary: md-palette($md-light-blue);
-$alcomy-app-accent:  md-palette($md-amber, A200, A100, A400);
+$alcomy-app-accent:  md-palette($md-amber);
 
 // The warn palette is optional (defaults to red).
 $alcomy-app-warn:    md-palette($md-red);

@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/core/style/variables';
+@import '~@angular/material/core/style/elevation';
 
 html {
   height: 100%;
@@ -10,4 +12,19 @@ body {
   box-sizing: border-box;
   height: 100%;
   min-height: 100%;
+}
+
+// This is here to fix an issue present in @angular/material@^2.0.0-beta.0
+// where [md-subheader] under md-list does not have a font family assigned to it.
+// I imagine this will be fixed in the future but until then the following style works.
+md-list, md-nav-list {
+
+  [md-subheader] {
+    font-family: $md-font-family;
+  }
+
+}
+
+md-toolbar.section-header {
+  @include md-elevation(2);
 }

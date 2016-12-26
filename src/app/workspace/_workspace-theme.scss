@@ -1,0 +1,32 @@
+// Import all the tools needed to customize the theme and extract parts of it
+@import '~@angular/material/core/theming/palette';
+@import '~@angular/material/core/theming/theming';
+
+// Define a mixin that accepts a theme and outputs the color styles for the component.
+@mixin alc-workspace-theme($theme) {
+  // Extract whichever individual palettes you need from the theme.
+
+  $primary: map-get($theme, primary);         // primary color palette
+  $accent: map-get($theme, accent);           // accent color palette
+  $warn: map-get($theme, warn);               // warm color palette
+  $background: map-get($theme, background);   // background color palette
+  $foreground: map-get($theme, foreground);   // foreground color palette
+
+  // Use md-color to extract individual colors from a palette as necessary.
+  .main-toolbar {
+
+    button.active, a.active {
+      background-color: md-color($background, disabled-button);
+    }
+  }
+  
+  .main-sidenav {
+
+    .nav-button.active .md-list-item{
+      background-color: md-color($background, disabled-button);
+    }
+  }
+  
+    
+  
+}

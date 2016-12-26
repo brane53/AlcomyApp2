@@ -26,6 +26,17 @@ $alcomy-app-theme: md-light-theme($alcomy-app-primary, $alcomy-app-accent, $alco
 @include angular-material-theme($alcomy-app-theme);
 @include alcomy-theme($alcomy-app-theme);
 
+.dashboard-theme {
+    // The palettes that will make up the resident theme
+  $alcomy-app-primary: md-palette($md-light-blue);
+  $alcomy-app-accent:  md-palette($md-amber);
+  $alcomy-app-warn:    md-palette($md-red);
+  $alcomy-app-theme: md-light-theme($alcomy-app-primary, $alcomy-app-accent, $alcomy-app-warn);
+  // The dashboard theme is a light theme and is made up of the previous palettes.
+  @include angular-material-theme($alcomy-app-theme);
+  @include alcomy-theme($alcomy-app-theme);
+}
+
 .residents-theme {
   // The palettes that will make up the resident theme
   $residents-primary: md-palette($md-red);

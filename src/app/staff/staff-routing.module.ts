@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { workspaceRoutes } from './workspace.routing';
+import { staffRoutes } from './staff.routing';
 
 @NgModule({
   imports: [
-    RouterModule.forChild(workspaceRoutes)
+    RouterModule.forChild(staffRoutes)
   ],
   exports: [
     RouterModule
   ]
 
 })
-export class WorkspaceRoutingModule { }
+export class StaffRoutingModule { }

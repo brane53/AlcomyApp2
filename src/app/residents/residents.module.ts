@@ -8,7 +8,8 @@ import { ResidentsRoutingModule } from './residents-routing.module'
 import { ResidentsComponent } from './residents.component';
 import { ResidentDetailComponent } from './resident-detail/resident-detail.component';
 import { ResidentListComponent } from './resident-list/resident-list.component';
-import { SharedModule } from '../shared/shared.module'
+import { SharedModule } from '../shared/shared.module';
+import { ResidentGroupsComponent } from './resident-groups/resident-groups.component'
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SharedModule } from '../shared/shared.module'
   declarations: [
     ResidentsComponent, 
     ResidentDetailComponent,
-    ResidentListComponent
+    ResidentListComponent,
+    ResidentGroupsComponent
   ]
 })
 export class ResidentsModule { }

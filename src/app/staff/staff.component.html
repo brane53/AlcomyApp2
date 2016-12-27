@@ -1,3 +1,16 @@
-<p>
-  staff works!
-</p>
+<alc-vertical-toolbar fxFlexOrder fxFlexOrder.xs="1">
+  <a md-icon-button routerLink="list" routerLinkActive="active">
+    <md-icon class="md-24">list</md-icon>
+  </a>
+  <a md-icon-button routerLink="groups" routerLinkActive="active">
+    <md-icon class="md-24">group_work</md-icon>
+  </a>
+  <a md-icon-button routerLink="schedule" routerLinkActive="active">
+    <md-icon class="md-24">event</md-icon>
+  </a>
+  <a md-icon-button routerLinkActive="active">
+    <md-icon class="md-24">security</md-icon>
+  </a>
+</alc-vertical-toolbar>
+
+<router-outlet></router-outlet>

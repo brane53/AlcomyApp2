@@ -2,6 +2,7 @@
 @import '~@angular/material/core/theming/theming';
 
 $sidenav-mobile-width: 250px !default;
+$sidenav-messages-width: 320px !default;
 $sidenav-desktop-width: 400px !default;
 
 :host {
@@ -33,6 +34,25 @@ md-toolbar.main-toolbar {
 
 }
 
-md-sidenav {
+md-sidenav.main-sidenav {
   min-width: $sidenav-mobile-width;
+}
+
+md-sidenav.message-sidenav {
+  min-width: $sidenav-messages-width;
+  max-width: $sidenav-messages-width;
+}
+
+// This is a temporary fix to style the md-tab-label. Angular Material styles .md-tab-label
+// with a default min-width of 160px which is just too large for some applications. Attempts
+// to override the sytle doesn't appear to work unless you specify /deep/ and add !important.
+// this should be fixed in the future but until then the following style works. However, it is 
+// not dynamic or responsive. I basically took the width of the sidenav and divided it by the 
+// number of tabs I wanted to have. I also made the labels flex because the icons were not 
+// centering properly. This whole fix is sloppy but it works for now.
+md-sidenav.message-sidenav /deep/ .md-tab-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px !important;
 }

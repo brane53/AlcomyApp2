@@ -1,11 +1,10 @@
 <md-sidenav-container fxFlex align="start" class="main-sidenav-container">
-  <md-sidenav #sidenav class="main-sidenav">
+  <md-sidenav #sidenav class="main-sidenav" align="start">
     <div [class]="theme">
-    <md-toolbar class="md-primary">
-      <!--@Temporary Currently logged in user should have their name here-->
-
-      Brane Vrajich
-    </md-toolbar>
+      <md-toolbar class="md-primary">
+        <!--@Temporary Currently logged in user should have their name here-->
+        Brane Vrajich
+      </md-toolbar>
     </div>
     <md-nav-list>
       <h2 md-subheader>MY STUFF</h2>
@@ -43,7 +42,7 @@
           RESIDENTS
         </a>
       </md-list-item>
-      <md-list-item class="staff-theme nav-button" (click)="changeTheme('staff-theme')">
+      <md-list-item class="staff-theme nav-button" (click)="changeTheme('staff-theme')" routerLink="/staff/list">
         <md-icon md-list-icon class="md-primary">face</md-icon>
         <a md-line>
           STAFF
@@ -80,7 +79,7 @@
           <md-icon class="md-24">menu</md-icon>
         </button>
       </div>-->
-      <span fxShow="<false></false>" fxShow.gt-xs fxFlex="48px"></span>
+      <span fxShow="false" fxShow.gt-xs fxFlex="48px"></span>
       <!--Dashboard Button-->
       <a md-button fxHide="false" fxHide.xs (click)="changeTheme('')" routerLink="/dashboard/tasks" routerLinkActive="active">
         DASHBOARD
@@ -90,17 +89,65 @@
         RESIDENTS
       </a>
       <!--Staff Button-->
-      <a md-button fxHide="false" fxHide.xs fxHide.xs (click)="changeTheme('staff-theme')">
+      <a md-button fxHide="false" fxHide.xs fxHide.xs (click)="changeTheme('staff-theme')" routerLink="/staff/list">
         STAFF
       </a>
       <!--Company Button-->
       <a md-button fxHide="false" fxHide.xs fxHide.xs (click)="changeTheme('company-theme')">
         COMPANY
       </a>
+
+      <span fxFlex></span>
+
+      <button md-icon-button>
+        <md-icon class="md-24">add</md-icon>
+      </button>
+      <button md-icon-button (click)="messageSidenav.toggle()">
+        <md-icon class="md-24">announcement</md-icon>
+      </button>
     </md-toolbar>
 
     <router-outlet></router-outlet>
 
   </div>
+
+  <!--Message Center Sidenav-->
+  <md-sidenav #messageSidenav class="message-sidenav" align="end">
+    
+    <div [class]="theme">
+      <md-toolbar fxLayoutAlign="center center" color="primary">
+        NOTIFICATIONS
+      </md-toolbar>
+    </div>
+
+    <md-tab-group>
+      <md-tab label="ALL">
+        
+        <h1>Best pasta restaurants</h1>
+        <p>...</p>
+      </md-tab>
+      <md-tab>
+        <template md-tab-label>
+           <md-icon class="md-24">warning</md-icon>
+        </template>
+        <h1>Terrible sushi restaurants</h1>
+        <p>...</p>
+      </md-tab>
+      <md-tab>
+        <template md-tab-label>
+           <md-icon class="md-24">alarm</md-icon>
+        </template>
+        <h1>Terrible sushi restaurants</h1>
+        <p>...</p>
+      </md-tab>
+      <md-tab>
+        <template md-tab-label>
+           <md-icon class="md-24">message</md-icon>
+        </template>
+        <h1>Terrible sushi restaurants</h1>
+        <p>...</p>
+      </md-tab>
+    </md-tab-group>
+  </md-sidenav>
 
 </md-sidenav-container>

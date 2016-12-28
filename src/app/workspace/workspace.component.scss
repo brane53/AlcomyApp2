@@ -41,6 +41,17 @@ md-sidenav.main-sidenav {
 md-sidenav.message-sidenav {
   min-width: $sidenav-messages-width;
   max-width: $sidenav-messages-width;
+  .timestamp {
+    font-size: 12px;
+    color: grey;
+  }
+  .bold {
+    font-weight: 900;
+    font-style: initial;
+  }
+  /deep/ .alert-text {
+    word-wrap: break-word;
+  }
 }
 
 // This is a temporary fix to style the md-tab-label. Angular Material styles .md-tab-label

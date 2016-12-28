@@ -99,12 +99,37 @@
 
       <span fxFlex></span>
 
-      <button md-icon-button>
+      <button md-icon-button [mdMenuTriggerFor]="quickAddMenu">
         <md-icon class="md-24">add</md-icon>
       </button>
+
+      <md-menu #quickAddMenu="mdMenu">
+        <button md-menu-item>
+          <md-icon>remove_red_eye</md-icon>
+          <span>Add Watch Item</span>
+        </button>
+        <button md-menu-item>
+          <md-icon>build</md-icon>
+          <span>Add Work Order</span>
+        </button>
+        <button md-menu-item>
+          <md-icon>local_hospital</md-icon>
+          <span>Add Nurse Visit</span>
+        </button>
+        <button md-menu-item>
+          <md-icon>error_outline</md-icon>
+          <span>Add Complaint</span>
+        </button>
+        <button md-menu-item>
+          <md-icon>lightbulb_outline</md-icon>
+          <span>Add Suggestion</span>
+        </button>
+      </md-menu>
+
       <button md-icon-button (click)="messageSidenav.toggle()">
         <md-icon class="md-24">announcement</md-icon>
       </button>
+
     </md-toolbar>
 
     <router-outlet></router-outlet>
@@ -123,8 +148,40 @@
     <md-tab-group>
       <md-tab label="ALL">
         
-        <h1>Best pasta restaurants</h1>
-        <p>...</p>
+        <md-list>
+          <h2 md-subheader>Alerts</h2>
+          <md-divider></md-divider>
+          <md-list-item class="md-3-line">
+            <md-icon md-list-icon class="md-warn">remove_red_eye</md-icon>
+            <h3 md-line class="alert-title bold">Skin Tear</h3>
+            <span md-line class="alert-text"><em class="bold">Harry Potter</em> created a new watch item</span>
+            <span md-line></span>
+            <div fxLayout="column" fxLayoutAlign="center start">
+              <span class="timestamp">45 min ago</span>
+              <button md-icon-button>
+                <md-icon>keyboard_arrow_down</md-icon>
+              </button>
+            </div>
+          </md-list-item>
+
+          <md-divider></md-divider>
+
+          <md-list-item md-3-line>
+            <md-icon md-list-icon class="md-warn">local_pharmacy</md-icon>
+            <h3 md-line class="bold">Order Medications</h3>
+            <span md-line><em class="bold">Seroquel</em> for <em class="bold">Brane Vrajich</em> will be out in <em class="bold">2 days</em></span>
+            <span md-line></span>
+            <div fxLayout="column" fxLayoutAlign="center start">
+              <span class="timestamp">30 min ago</span>
+              <button md-icon-button>
+                <md-icon>keyboard_arrow_down</md-icon>
+              </button>
+            </div>
+          </md-list-item>
+
+          <md-divider></md-divider>
+
+        </md-list>
       </md-tab>
       <md-tab>
         <template md-tab-label>

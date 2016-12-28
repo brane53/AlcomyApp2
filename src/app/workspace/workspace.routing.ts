@@ -8,12 +8,12 @@ export const workspaceRoutes: Routes = [
     component: WorkspaceComponent,
     children: [
       {
-        path: 'residents',
-        loadChildren: 'app/residents/residents.module#ResidentsModule'
-      },
-      {
         path: 'dashboard',
         loadChildren: 'app/dashboard/dashboard.module#DashboardModule'
+      },
+      {
+        path: 'residents',
+        loadChildren: 'app/residents/residents.module#ResidentsModule'
       },
       {
         path: 'staff',

@@ -29,5 +29,12 @@
   "typescript.check.workspaceVersion": false,
   "window.zoomLevel": 1,
 
-  "editor.renderLineHighlight": "all"
+  "editor.renderLineHighlight": "all",
+  "TodoParser": {
+    "exclude": ["js", "css"],
+    "include": ["ts", "html", "scss"],
+    "folderExclude": ["node_modules", ".vscode"],
+    "only": ["src"],
+    "markers": ["NOTE:", "REMINDER:", "FIX:", "REFACTOR:"]
+  }
 }

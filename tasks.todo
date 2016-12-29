@@ -1,0 +1,16 @@
+Notifications Widget (Sidenav):
+  ☐ Put the current markup in its on component
+  Component:
+    ☐ Needs to subscribe to some sort of notification service and get a stream of Notifications
+    ☐ Needs to be able to filter through the various notification types and display them in the
+      proper tab
+    ☐ Each notification item should have a summary of the noficiation that takes up two lines.
+    ☐ Clicking on the expand button should expand the notification item and reveal additional
+      information or fucntionality. e.g. respond to a message.
+    ☐ Should be able to clear any notification by clicking on a dismiss button on desktop or by
+      swiping on mobile
+    ☐ Should be able to clear all notifications with the click of a button.
+    ☐ Notifications should be displayed in chronological order with the most recent items at the top
+    ☐ clicking/tapping on the notification item should navigate the user to it's respective area of
+      the app. e.g. Clicking a watch item alert should take the user to the watch items and focus on
+      on the item that the alert was referencing.

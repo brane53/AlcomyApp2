@@ -30,30 +30,47 @@
       <md-divider></md-divider>
       <h2 md-subheader>MODULES</h2>
 
-      <md-list-item class="dashboard-theme nav-button" (click)="changeTheme('')" routerLink="/dashboard/tasks" routerLinkActive="active">
+      <md-list-item 
+      class="dashboard-theme nav-button" 
+      (click)="changeTheme('')" 
+      routerLink="/dashboard/tasks" 
+      routerLinkActive="active">
         <md-icon md-list-icon class="md-primary">dashboard</md-icon>
         <a md-line>
           DASHBOARD
         </a>
       </md-list-item>
-      <md-list-item class="residents-theme nav-button" (click)="changeTheme('residents-theme')" routerLink="/residents/list" routerLinkActive="active">
+
+      <md-list-item 
+      class="residents-theme nav-button" 
+      (click)="changeTheme('residents-theme')" 
+      routerLink="/residents/list" 
+      routerLinkActive="active">
         <md-icon md-list-icon class="md-primary">people</md-icon>
         <a md-line>
           RESIDENTS
         </a>
       </md-list-item>
-      <md-list-item class="staff-theme nav-button" (click)="changeTheme('staff-theme')" routerLink="/staff/list">
+
+      <md-list-item 
+      class="staff-theme nav-button" 
+      (click)="changeTheme('staff-theme')" 
+      routerLink="/staff/list">
         <md-icon md-list-icon class="md-primary">face</md-icon>
         <a md-line>
           STAFF
         </a>
       </md-list-item>
-      <md-list-item class="company-theme nav-button" (click)="changeTheme('company-theme')">
+
+      <md-list-item 
+      class="company-theme nav-button" 
+      (click)="changeTheme('company-theme')">
         <md-icon md-list-icon class="md-primary">business</md-icon>
         <a md-line>
           COMPANY
         </a>
       </md-list-item>
+      
       <md-divider></md-divider>
     
     </md-nav-list>
@@ -126,7 +143,7 @@
         </button>
       </md-menu>
 
-      <button md-icon-button (click)="messageSidenav.toggle()">
+      <button md-icon-button (click)="notificationSidenav.toggle()">
         <md-icon class="md-24">announcement</md-icon>
       </button>
 
@@ -136,8 +153,8 @@
 
   </div>
 
-  <!--Message Center Sidenav-->
-  <md-sidenav #messageSidenav class="message-sidenav" align="end">
+  <!--Notification Center Sidenav-->
+  <md-sidenav #notificationSidenav class="notification-sidenav" align="end">
     
     <div [class]="theme">
       <md-toolbar fxLayoutAlign="center center" color="primary">
@@ -146,6 +163,7 @@
     </div>
 
     <md-tab-group>
+      <!--All Notifications-->
       <md-tab label="ALL">
         
         <md-list>

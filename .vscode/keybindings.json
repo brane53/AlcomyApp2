@@ -42,11 +42,11 @@
     "key": "shift+alt+t",
     "command": "workbench.action.tasks.terminate"
   },
-  {
-    "key": "ctrl+enter",
-    "command": "-task.new",
-    "when": "editorTextFocus"
-  },
+  // {
+  //   "key": "ctrl+enter",
+  //   "command": "-task.new",
+  //   "when": "editorTextFocus"
+  // },
 
   // File Extension Switcher Keybindings
   {

@@ -14,3 +14,5 @@ Notifications Widget (Sidenav):
     ☐ clicking/tapping on the notification item should navigate the user to it's respective area of
       the app. e.g. Clicking a watch item alert should take the user to the watch items and focus on
       on the item that the alert was referencing.
+    ☐ Notification item icon should correspond to the notification type.
+    ☐ Notification item icon should be displayed in the proper color

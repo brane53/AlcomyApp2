@@ -1,4 +1,5 @@
 <md-sidenav-container fxFlex align="start" class="main-sidenav-container">
+  <!--Main Navigation Sidenav (Mobile View)-->
   <md-sidenav #sidenav class="main-sidenav" align="start">
     <div [class]="theme">
       <md-toolbar class="md-primary">
@@ -81,7 +82,7 @@
   </md-sidenav>
 
 
-
+  <!--Main Workspace-->
   <div id="workspace-wrapper" [class]="theme">
     <md-toolbar class="main-toolbar" color="primary">
       <!--Menu Button-->
@@ -98,15 +99,15 @@
       </div>-->
       <span fxShow="false" fxShow.gt-xs fxFlex="48px"></span>
       <!--Dashboard Button-->
-      <a md-button fxHide="false" fxHide.xs (click)="changeTheme('')" routerLink="/dashboard/tasks" routerLinkActive="active">
+      <a md-button fxHide="false" fxHide.xs (click)="changeTheme('')" routerLink="/dashboard" routerLinkActive="active">
         DASHBOARD
       </a>
       <!--Resdients Button-->
-      <a md-button fxHide="false" fxHide.xs fxHide.xs (click)="changeTheme('residents-theme')" routerLink="/residents/list" routerLinkActive="active">
+      <a md-button fxHide="false" fxHide.xs fxHide.xs (click)="changeTheme('residents-theme')" routerLink="/residents" routerLinkActive="active">
         RESIDENTS
       </a>
       <!--Staff Button-->
-      <a md-button fxHide="false" fxHide.xs fxHide.xs (click)="changeTheme('staff-theme')" routerLink="/staff/list">
+      <a md-button fxHide="false" fxHide.xs fxHide.xs (click)="changeTheme('staff-theme')" routerLink="/staff">
         STAFF
       </a>
       <!--Company Button-->

@@ -18,3 +18,7 @@ Navigation:
   Fix:
     ☐ Style for the active link in the main navigation get removed when clicking on the a different
       items on the vertical toolbar
+
+Theme:
+  ☐ The theme should change only when a successful navigation happens. It should not change if the
+    the navigation fails.

@@ -22,3 +22,9 @@ Navigation:
     ☐ Style for the active link in the main navigation get removed when clicking on the a different
       items on the vertical toolbar
 
+<<<<<<< HEAD
+=======
+Theme:
+  ☐ The theme should change only when a successful navigation happens. It should not change if the
+    the navigation fails.
+>>>>>>> 73c258f6f4c537183a262d46c8556c1fc3a0ecbb

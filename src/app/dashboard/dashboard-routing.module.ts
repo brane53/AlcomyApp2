@@ -10,7 +10,9 @@ import { dashboardRoutes } from './dashboard.routing'
   ],
   exports: [
     RouterModule
+  ],
+  providers: [
+    // guard and resolver service providers
   ]
-
 })
 export class DashboardRoutingModule { }

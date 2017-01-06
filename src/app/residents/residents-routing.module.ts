@@ -10,6 +10,9 @@ import { residentRoutes } from './residents.routing'
   ],
   exports: [
     RouterModule
+  ],
+  providers: [
+    // guard and resolver service providers
   ]
 
 })

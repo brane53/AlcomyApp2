@@ -8,6 +8,10 @@ import { appRoutes } from './app.routing';
   ],
   exports: [
     RouterModule
+  ],
+  // guard and resolver service providers
+  providers: [
+
   ]
 })
 export class AppRoutingModule {}

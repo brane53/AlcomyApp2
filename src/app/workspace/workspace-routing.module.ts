@@ -9,6 +9,9 @@ import { workspaceRoutes } from './workspace.routing';
   ],
   exports: [
     RouterModule
+  ],
+  providers: [
+    // guard and resolver service providers
   ]
 
 })

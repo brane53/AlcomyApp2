@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { staffRoutes } from './staff.routing';
+import { companyRoutes } from './company.routing'
+
 
 @NgModule({
   imports: [
-    RouterModule.forChild(staffRoutes)
+    RouterModule.forChild(companyRoutes)
   ],
   exports: [
     RouterModule
@@ -13,6 +14,5 @@ import { staffRoutes } from './staff.routing';
   providers: [
     // guard and resolver service providers
   ]
-
 })
-export class StaffRoutingModule { }
+export class CompanyRoutingModule { }

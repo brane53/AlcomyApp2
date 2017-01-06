@@ -10,7 +10,9 @@ import { VerticalToolbarComponent } from './vertical-toolbar/vertical-toolbar.co
     MaterialModule.forRoot(),
     FlexLayoutModule.forRoot()
   ],
-  declarations: [VerticalToolbarComponent],
+  declarations: [
+    VerticalToolbarComponent
+  ],
   exports: [
     VerticalToolbarComponent
   ]

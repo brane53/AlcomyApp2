@@ -26,6 +26,11 @@ export const dashboardRoutes: Routes = [
       {
         path: 'watchlist',
         component: WatchlistComponent
+      },
+      {
+        path: '',
+        redirectTo: '/dashboard/tasks',
+        pathMatch: 'full'
       }
     ]
   }

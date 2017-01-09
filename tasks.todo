@@ -1,4 +1,4 @@
-Notifications Widget (Sidenav):
+NOTIFICATION WIDGET (SIDENAV):
   ☐ Put the current markup in its on component
   Component:
     ☐ Needs to subscribe to some sort of notification service and get a stream of Notifications
@@ -17,11 +17,34 @@ Notifications Widget (Sidenav):
     ☐ Notification item icon should correspond to the notification type.
     ☐ Notification item icon should be displayed in the proper color
 
-Navigation:
+SECURITY:
+  ☐ Create Security Rules for Roles
+    Custom Rules:
+      ☐ Administrator should be able to assign security rules to a role.
+      ☐ Administrator should be able to assign security rules to a user which will grant the user
+        additional permissions not provided by the role.
+      ☐ Assigning rules to a user should override the default permissions of roles
+      ☐ In cases where multiple roles are assigned to a single user, the permissions from the roles
+        should be combined and any duplicate permissions should be eliminated.
+      ☐ User should not be able to modify their permissions or the permissions of other user unless
+        they are an administrator.
+      ☐ 
+    Default Rules:
+      ☐ By default there should be 3 roles: Administrator, Med Tech, Caregiver
+
+      
+
+NAVIGATION:
+  Create Guards:
+    ☐ Workpsace Route
+    ☐ Dashboard Route
+    ☐ Residents Route
+    ☐ Staff Route
+    ☐ Company Route
   Fix:
     ☐ Style for the active link in the main navigation get removed when clicking on the a different
       items on the vertical toolbar
 
-Theme:
+THEME:
   ☐ The theme should change only when a successful navigation happens. It should not change if the
     the navigation fails.

@@ -17,6 +17,11 @@ export const residentRoutes: Routes = [
       {
         path: 'groups',
         component: ResidentGroupsComponent
+      },
+      {
+        path: '',
+        redirectTo: '/residents/list',
+        pathMatch: 'full'
       }
     ]
   }

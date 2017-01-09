@@ -21,6 +21,11 @@ export const staffRoutes: Routes = [
       {
         path: 'schedule',
         component: StaffScheduleComponent
+      },
+      {
+        path: '',
+        redirectTo: '/staff/list',
+        pathMatch: 'full'
       }
     ]
   }

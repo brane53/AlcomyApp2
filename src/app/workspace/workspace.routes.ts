@@ -18,6 +18,10 @@ export const workspaceRoutes: Routes = [
       {
         path: 'staff',
         loadChildren: 'app/staff/staff.module#StaffModule'
+      },
+      {
+        path: 'company',
+        loadChildren: 'app/company/company.module#CompanyModule'
       }
     ]
   }

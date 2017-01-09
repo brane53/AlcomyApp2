@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { ResidentsRoutingModule } from './residents-routing.module'
+import { ResidentsRoutingModule } from './residents-routing.module';
 import { ResidentsComponent } from './residents.component';
 import { ResidentDetailComponent } from './resident-detail/resident-detail.component';
 import { ResidentListComponent } from './resident-list/resident-list.component';

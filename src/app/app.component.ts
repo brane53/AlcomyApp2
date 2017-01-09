@@ -6,10 +6,8 @@ import { Router } from '@angular/router';
   selector: 'alc-root',
   template: `<router-outlet></router-outlet>`,
   styleUrls: ['./app.component.scss']
-  
 })
 export class AppComponent {
 
-  constructor(private router: Router){
-  }
+  constructor(private router: Router) {}
 }

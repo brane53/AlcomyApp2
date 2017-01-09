@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 export class WorkspaceComponent implements OnInit {
   theme: string;
 
-  constructor() { 
-    this.theme = "";
+  constructor() {
+    this.theme = '';
   }
 
   ngOnInit() {
@@ -16,7 +16,7 @@ export class WorkspaceComponent implements OnInit {
 
   // @temporary - Just used to show off the changing of themes
   // Ideally, we'd only want to change themes after a successful navigation takes place.
-  changeTheme(theme){
+  changeTheme(theme) {
     this.theme = theme;
   }
 

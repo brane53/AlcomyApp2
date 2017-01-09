@@ -5,7 +5,7 @@ import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 // Alcomy Modules
-import { SharedModule } from '../shared/shared.module'
+import { SharedModule } from '../shared/shared.module';
 import { StaffRoutingModule } from './staff-routing.module';
 
 // Staff Module Components
@@ -23,9 +23,9 @@ import { StaffScheduleComponent } from './staff-schedule/staff-schedule.componen
     StaffRoutingModule
   ],
   declarations: [
-    StaffComponent, 
-    StaffListComponent, 
-    StaffGroupsComponent, 
+    StaffComponent,
+    StaffListComponent,
+    StaffGroupsComponent,
     StaffScheduleComponent
   ]
 })

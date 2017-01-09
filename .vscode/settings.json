@@ -37,5 +37,8 @@
     "only": ["src"],
     "markers": ["NOTE:", "REMINDER:", "FIX:", "REFACTOR:"]
   },
-  "terminal.integrated.scrollback": 2000
+  "terminal.integrated.scrollback": 2000,
+  "tslint.rulesDirectory": "./node_modules/codelyzer",
+  "typescript.tsdk": "node_modules/typescript/lib"
+
 }

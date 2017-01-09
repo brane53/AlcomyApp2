@@ -14,20 +14,20 @@ import { WorkspaceComponent } from '../workspace/workspace.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { ResidentsComponent } from '../residents/residents.component';
 import { StaffComponent } from '../staff/staff.component';
-import { CompanyComponent } from '../company/company.component'
+import { CompanyComponent } from '../company/company.component';
 
 @Component({
   selector: 'blank-cmp',
   template: ``
 })
-export class BlankCmp {
+export class BlankComponent {
 }
 
 @Component({
   selector: 'root-cmp',
   template: `<router-outlet></router-outlet>`
 })
-export class RootCmp {
+export class RootComponent {
 }
 
 // export const routerConfig: Routes = [
@@ -74,8 +74,8 @@ export function configureRoutedTests(routes: Routes) {
 @NgModule({
   imports: [RouterTestingModule, CommonModule],
   entryComponents: [
-    BlankCmp,
-    RootCmp,
+    BlankComponent,
+    RootComponent,
     WorkspaceComponent,
     DashboardComponent,
     ResidentsComponent,
@@ -83,8 +83,8 @@ export function configureRoutedTests(routes: Routes) {
     CompanyComponent
   ],
   exports: [
-    BlankCmp,
-    RootCmp,
+    BlankComponent,
+    RootComponent,
     WorkspaceComponent,
     DashboardComponent,
     ResidentsComponent,
@@ -92,8 +92,8 @@ export function configureRoutedTests(routes: Routes) {
     CompanyComponent
   ],
   declarations: [
-    BlankCmp,
-    RootCmp,
+    BlankComponent,
+    RootComponent,
     WorkspaceComponent,
     DashboardComponent,
     ResidentsComponent,

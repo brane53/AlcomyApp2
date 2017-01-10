@@ -14,7 +14,7 @@ import { WorkspaceComponent } from '../workspace/workspace.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { ResidentsComponent } from '../residents/residents.component';
 import { StaffComponent } from '../staff/staff.component';
-import { CompanyComponent } from '../company/company.component'
+import { CompanyComponent } from '../company/company.component';
 
 @Component({
   selector: 'blank-cmp',

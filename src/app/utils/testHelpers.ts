@@ -30,13 +30,6 @@ export class BlankComponent {
 export class RootComponent {
 }
 
-// export const routerConfig: Routes = [
-//   { path: '', component: BlankCmp },
-//   { path: 'search', component: SearchComponent },
-//   { path: 'artists/:id', component: ArtistComponent },
-//   { path: 'tracks/:id', component: TrackComponent },
-//   { path: 'albums/:id', component: AlbumComponent }
-// ];
 
 export function advance(fixture: ComponentFixture<any>): void {
   tick();
@@ -62,6 +55,7 @@ export function configureRoutedTests(routes: Routes) {
       },
       TestModule
     ],
+
     providers: [
       {
         provide: ActivatedRoute,

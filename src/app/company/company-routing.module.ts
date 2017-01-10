@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { companyRoutes } from './company.routing'
+import { companyRoutes } from './company.routes';
 
 
 @NgModule({

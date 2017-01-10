@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { staffRoutes } from './staff.routing';
+import { staffRoutes } from './staff.routes';
 
 @NgModule({
   imports: [

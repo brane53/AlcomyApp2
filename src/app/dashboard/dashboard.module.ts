@@ -22,8 +22,8 @@ import { WatchlistComponent } from './watchlist/watchlist.component';
     SharedModule
   ],
   declarations: [
-    DashboardComponent, 
-    TasksComponent, 
+    DashboardComponent,
+    TasksComponent,
     DashboardMedicationsComponent,
     CareComponent,
     WatchlistComponent

@@ -34,7 +34,7 @@
       <md-list-item 
       class="dashboard-theme nav-button" 
       (click)="changeTheme('')" 
-      routerLink="/dashboard/tasks" 
+      routerLink="/dashboard" 
       routerLinkActive="active">
         <md-icon md-list-icon class="md-primary">dashboard</md-icon>
         <a md-line>
@@ -45,7 +45,7 @@
       <md-list-item 
       class="residents-theme nav-button" 
       (click)="changeTheme('residents-theme')" 
-      routerLink="/residents/list" 
+      routerLink="/residents" 
       routerLinkActive="active">
         <md-icon md-list-icon class="md-primary">people</md-icon>
         <a md-line>
@@ -56,7 +56,8 @@
       <md-list-item 
       class="staff-theme nav-button" 
       (click)="changeTheme('staff-theme')" 
-      routerLink="/staff/list">
+      routerLink="/staff"
+      routerLinkActive="active">
         <md-icon md-list-icon class="md-primary">face</md-icon>
         <a md-line>
           STAFF
@@ -65,7 +66,9 @@
 
       <md-list-item 
       class="company-theme nav-button" 
-      (click)="changeTheme('company-theme')">
+      (click)="changeTheme('company-theme')"
+      routerLink="/company"
+      routerLinkActive="active">
         <md-icon md-list-icon class="md-primary">business</md-icon>
         <a md-line>
           COMPANY
@@ -111,7 +114,7 @@
         STAFF
       </a>
       <!--Company Button-->
-      <a md-button fxHide="false" fxHide.xs fxHide.xs (click)="changeTheme('company-theme')">
+      <a md-button fxHide="false" fxHide.xs fxHide.xs (click)="changeTheme('company-theme')" routerLink="/company">
         COMPANY
       </a>
 

@@ -19,7 +19,7 @@
   // Open User Settings
   {
     "key": "ctrl+k s",
-    "command": "workbench.action.openGlobalSettings"
+    "command": "workbench.action.openWorkspaceSettings"
   },
   // Open Themes
   {

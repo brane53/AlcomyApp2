@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { dashboardRoutes } from './dashboard.routing'
+import { dashboardRoutes } from './dashboard.routes';
 
 
 @NgModule({

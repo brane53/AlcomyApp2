@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { workspaceRoutes } from './workspace.routing';
+import { workspaceRoutes } from './workspace.routes';
 
 @NgModule({
   imports: [

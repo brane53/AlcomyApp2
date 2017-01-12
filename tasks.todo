@@ -57,7 +57,7 @@ THEME:
 
 SERVICES:
   ☐ ResidentsService
-    - getResident(id: number)
+    - getResident(id: string)
     - getResidents()
     - selectedResident: Resident
     - createResident(resident: Resident)
@@ -67,6 +67,8 @@ SERVICES:
       be restored if needed?
     - moveResident(residentId: number, faclityId)
   ☐ MedicationService
+    -getMedication(id: string)
+    -getResidentMedications(residentId: string)
   ☐ StaffService
   ☐ FaclityService
     - createFaclity(facility: Facility)
@@ -74,6 +76,7 @@ SERVICES:
 
 MODELS:
   ☐ Person
+      - id: string
       - firstName: string
       - lastName: string
       - middlename?: string
@@ -81,9 +84,17 @@ MODELS:
     ☐ Resident
         - ssn: number
         - dateOfBirth: Date
+        - religion
+        - isDNR
+        - isAmbulatory
+        - isVerbal
+        - isActive
+        - isDeceased
+        -
     ☐ Contact
         - phoneNumber: PhoneNumber
         - address: Address
+        - email: string
       ☐ Employee
           - ssn: number
           - dateOfBirth: Date
@@ -110,7 +121,12 @@ MODELS:
     ☐ ReminderNotification
     ☐ MessageNotification
   ☐ Address
+    - streetAddress: string
+    - city: string
+    - state: string
+    - zip: number
   ☐ Position
+    - title: string
   ☐ Role
   ☐ Comment
   ☐ PhoneNumber

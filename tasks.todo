@@ -80,30 +80,42 @@ MODELS:
       - firstName: string
       - lastName: string
       - middlename?: string
-      - gender: string
-    ☐ Resident
-        - ssn: number
-        - dateOfBirth: Date
-        - religion
-        - isDNR
-        - isAmbulatory
-        - isVerbal
-        - isActive
-        - isDeceased
-        -
-    ☐ Contact
-        - phoneNumber: PhoneNumber
-        - address: Address
-        - email: string
-      ☐ Employee
-          - ssn: number
-          - dateOfBirth: Date
-      ☐ GenericContact
-      ☐ FamilyMember
-      ☐ Physician
-      ☐ Nurse
-      ☐ Specialist
+      - gender?: string
+  ☐ Resident extends Person
+      - ssn: number
+      - dateOfBirth: Date
+      - religion
+      - isDNR
+      - isAmbulatory
+      - isVerbal
+      - isActive
+      - isDeceased
+  ☐ Contact
+      - phoneNumber: PhoneNumber[]
+      - address: Address
+      - email: string[]
+  ☐ PersonContact extends Person, Contact
+
+  ☐ Employee extends PersonContact
+      - ssn: number
+      - dateOfBirth: Date
+  ☐ GenericContact
+  ☐ FamilyMember
+  ☐ Physician extends Contact
+  ☐ Nurse extends Contact
+  ☐ Specialist extends Contact
+  ☐ BusinessContact exends Contact
+      - name
+      - contacts: PersonContact[]
+  ☐ Pharmacy
   ☐ Medication
+    - id: string
+    - genericName: string 
+    - brandName: string
+    - strength: string 
+    - dosage: string
+    - description
+    - instruction
     ☐ MedicationScript
     ☐ CentrallyStoredMedication
   ☐ Task
@@ -125,6 +137,14 @@ MODELS:
     - city: string
     - state: string
     - zip: number
+  ☐ PhoneNumber
+    - number: string
+    - type: string
+    - isPrimary: boolean
+  ☐ Email
+    - address: string
+    - type: string
+    - isPrimary: boolean
   ☐ Position
     - title: string
   ☐ Role

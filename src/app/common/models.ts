@@ -1,7 +1,7 @@
 export abstract class Person {
-  id: string;
+  id?: string;
   firstName: string;
   middleName?: string;
   lastName: string;
-  gender: string;
+  gender?: string;
 }

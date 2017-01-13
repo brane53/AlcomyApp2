@@ -84,12 +84,13 @@ MODELS:
   ☐ Resident extends Person
       - ssn: number
       - dateOfBirth: Date
-      - religion
-      - isDNR
-      - isAmbulatory
-      - isVerbal
-      - isActive
-      - isDeceased
+      - religion: string
+      - isDNR: boolean
+      - isAmbulatory: boolean
+      - isVerbal: boolean
+      - isActive: boolean
+      - isDeceased: boolean
+      - imageUrl: string
   ☐ Contact
       - phoneNumber: PhoneNumber[]
       - address: Address

@@ -1,0 +1,23 @@
+@import '~@angular/material/core/style/elevation';
+@import '~@angular/material/core/theming/theming';
+
+$sidenav-mobile-width: 250px !default;
+$sidenav-notifications-width: 320px !default;
+$sidenav-desktop-width: 320px !default;
+
+:host {
+  //height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+md-sidenav-container {
+  height: 100%;
+}
+
+md-sidenav.account-sidenav {
+  min-width: $sidenav-mobile-width;
+  @include md-elevation(1);
+}

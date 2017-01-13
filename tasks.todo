@@ -1,19 +1,18 @@
 NOTIFICATION WIDGET (SIDENAV):
-  ☐ Put the current markup in its on component
+  ☐ Put the current markup in its own component
   Component:
     ☐ Needs to subscribe to some sort of notification service and get a stream of Notifications
     ☐ Needs to be able to filter through the various notification types and display them in the
       proper tab
-    ☐ Each notification item should have a summary of the noficiation that takes up two lines.
+    ☐ Notification items should have a summary of the noficiation that takes up two lines.
     ☐ Clicking on the expand button should expand the notification item and reveal additional
       information or fucntionality. e.g. respond to a message.
-    ☐ Should be able to clear any notification by clicking on a dismiss button on desktop or by
+    ☐ User should be able to clear any notification by clicking on a dismiss button on desktop or by
       swiping on mobile
-    ☐ Should be able to clear all notifications with the click of a button.
+    ☐ User should be able to clear all notifications with the click of a button.
     ☐ Notifications should be displayed in chronological order with the most recent items at the top
     ☐ clicking/tapping on the notification item should navigate the user to it's respective area of
-      the app. e.g. Clicking a watch item alert should take the user to the watch items and focus on
-      on the item that the alert was referencing.
+      the app and focus should be on the item. e.g. Clicking a watch item alert should take the user to the watch items and focus on the item that the alert was referencing.
     ☐ Notification item icon should correspond to the notification type.
     ☐ Notification item icon should be displayed in the proper color
 
@@ -28,10 +27,17 @@ SECURITY:
         should be combined and any duplicate permissions should be eliminated.
       ☐ User should not be able to modify their permissions or the permissions of other user unless
         they are an administrator.
-      ☐ 
+      Protecting Views:
+        ☐ Should be able to able to select that views that the user or role is allowed to see
+        
     Default Rules:
-      ☐ By default there should be 3 roles: Administrator, Med Tech, Caregiver
-
+      ☐ By default, there should be 4 roles: Owner, Administrator, Med Tech, Caregiver.
+        - Owner - has read a write access for everything within the business account
+        - Administrator - has read and write access to everything in the facilities they manage.
+        - Med Tech - has the same access as caregivers but they also have read/write access to 
+          medications
+        - Caregiver - has read access only to information pertanent to takingn care of residents.
+          they are also able to mark off tasks and edit their own profile. They cannot see others personal information
       
 
 NAVIGATION:
@@ -48,3 +54,101 @@ NAVIGATION:
 THEME:
   ☐ The theme should change only when a successful navigation happens. It should not change if the
     the navigation fails.
+
+SERVICES:
+  ☐ ResidentsService
+    - getResident(id: string)
+    - getResidents()
+    - selectedResident: Resident
+    - createResident(resident: Resident)
+    - updateResident(id: number, resident: Resident)
+    - deleteResident(id: number) - permanent
+    - removeResident(id) - resident is deleted from their records but still exists in the db and can
+      be restored if needed?
+    - moveResident(residentId: number, faclityId)
+  ☐ MedicationService
+    -getMedication(id: string)
+    -getResidentMedications(residentId: string)
+  ☐ StaffService
+  ☐ FaclityService
+    - createFaclity(facility: Facility)
+    - updateFaclity(facilityId: number, facility: Facility)
+
+MODELS:
+  ☐ Person
+      - id: string
+      - firstName: string
+      - lastName: string
+      - middlename?: string
+      - gender?: string
+  ☐ Resident extends Person
+      - ssn: number
+      - dateOfBirth: Date
+      - religion
+      - isDNR
+      - isAmbulatory
+      - isVerbal
+      - isActive
+      - isDeceased
+  ☐ Contact
+      - phoneNumber: PhoneNumber[]
+      - address: Address
+      - email: string[]
+  ☐ PersonContact extends Person, Contact
+
+  ☐ Employee extends PersonContact
+      - ssn: number
+      - dateOfBirth: Date
+  ☐ GenericContact
+  ☐ FamilyMember
+  ☐ Physician extends Contact
+  ☐ Nurse extends Contact
+  ☐ Specialist extends Contact
+  ☐ BusinessContact exends Contact
+      - name
+      - contacts: PersonContact[]
+  ☐ Pharmacy
+  ☐ Medication
+    - id: string
+    - genericName: string 
+    - brandName: string
+    - strength: string 
+    - dosage: string
+    - description
+    - instruction
+    ☐ MedicationScript
+    ☐ CentrallyStoredMedication
+  ☐ Task
+    ☐ CareTask
+    ☐ MedicationTask
+    ☐ GeneralTask
+  ☐ CareItem
+
+  ☐ User
+  ☐ Facility
+  ☐ Account
+  ☐ Note
+  ☐ Notification
+    ☐ AlertNotification
+    ☐ ReminderNotification
+    ☐ MessageNotification
+  ☐ Address
+    - streetAddress: string
+    - city: string
+    - state: string
+    - zip: number
+  ☐ PhoneNumber
+    - number: string
+    - type: string
+    - isPrimary: boolean
+  ☐ Email
+    - address: string
+    - type: string
+    - isPrimary: boolean
+  ☐ Position
+    - title: string
+  ☐ Role
+  ☐ Comment
+  ☐ PhoneNumber
+  
+

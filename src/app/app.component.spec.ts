@@ -13,12 +13,7 @@ import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
-    });
-    TestBed.compileComponents();
+    
   });
 
   // it('should create the app', async(() => {

@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { AccountRoutingModule } from './account-routing.module';
 import { AccountComponent } from './account.component';
 import { SummaryComponent } from './summary/summary.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { SummaryComponent } from './summary/summary.component';
   ],
   declarations: [
     AccountComponent,
-    SummaryComponent
+    SummaryComponent,
+    PaymentComponent
   ]
 })
 export class AccountModule { }

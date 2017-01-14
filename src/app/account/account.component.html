@@ -1,18 +1,35 @@
 <md-sidenav-container>
   <md-sidenav class="account-sidenav" mode="side" align="start" opened="true">
-    
-    <button md-raised-button routerLink="/dashboard">DASHBOARD</button>
+    <div 
+    fxLayout="row" 
+    fxLayoutAlign="center center"
+    class="dashboard-button-wrapper">
+      <button md-raised-button class="md-primary" routerLink="/dashboard">
+        GO TO DASHBOARD
+      </button>
+    </div>
     <md-nav-list>
+
       <md-list-item 
-      class="dashboard-theme nav-button" 
-      (click)="changeTheme('')" 
+      class="dashboard-theme nav-button"
       routerLink="summary" 
       routerLinkActive="active">
-        <md-icon md-list-icon class="md-primary">dashboard</md-icon>
+        <md-icon md-list-icon class="md-primary">info_outline</md-icon>
         <a md-line>
           SUMMARY
         </a>
       </md-list-item>
+
+      <md-list-item 
+      class="dashboard-theme nav-button"
+      routerLink="payment"
+      routerLinkActive="active">
+        <md-icon md-list-icon class="md-primary">payment</md-icon>
+        <a md-line>
+          PAYMENT
+        </a>
+      </md-list-item>
+
     </md-nav-list>
   </md-sidenav>
   <router-outlet></router-outlet>

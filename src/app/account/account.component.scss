@@ -20,4 +20,8 @@ md-sidenav-container {
 md-sidenav.account-sidenav {
   min-width: $sidenav-mobile-width;
   @include md-elevation(1);
+
+  .dashboard-button-wrapper {
+    padding: 20px 0;
+  }
 }

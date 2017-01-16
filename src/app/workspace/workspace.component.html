@@ -118,15 +118,17 @@
         RESIDENTS
       </a>
       <!--Staff Button-->
-      <a md-button fxHide="false" fxHide.xs fxHide.xs (click)="changeTheme('staff-theme')" routerLink="/staff">
+      <a md-button fxHide="false" fxHide.xs fxHide.xs (click)="changeTheme('staff-theme')" routerLink="/staff" routerLinkActive="active">
         STAFF
       </a>
       <!--Company Button-->
-      <a md-button fxHide="false" fxHide.xs fxHide.xs (click)="changeTheme('company-theme')" routerLink="/company">
+      <a md-button fxHide="false" fxHide.xs fxHide.xs (click)="changeTheme('company-theme')" routerLink="/company" routerLinkActive="active">
         COMPANY
       </a>
 
       <span fxFlex></span>
+
+
       <!--Add Menu Button-->
       <button md-icon-button [mdMenuTriggerFor]="quickAddMenu">
         <md-icon class="md-24">add</md-icon>
@@ -154,10 +156,14 @@
           <span>Add Suggestion</span>
         </button>
       </md-menu>
+
+
       <!--Notification Sidenav Button-->
       <button md-icon-button (click)="notificationSidenav.toggle()">
         <md-icon class="md-24">announcement</md-icon>
       </button>
+
+      
       <!--More Menu Button-->
       <button fxHide="false" fxHide.xs md-icon-button [mdMenuTriggerFor]="moreMenu">
         <md-icon class="md-24">more_vert</md-icon>

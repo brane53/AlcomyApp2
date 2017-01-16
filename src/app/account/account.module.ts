@@ -9,6 +9,7 @@ import { AccountRoutingModule } from './account-routing.module';
 import { AccountComponent } from './account.component';
 import { SummaryComponent } from './summary/summary.component';
 import { PaymentComponent } from './payment/payment.component';
+import { AdminListComponent } from './admin-list/admin-list.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { PaymentComponent } from './payment/payment.component';
   declarations: [
     AccountComponent,
     SummaryComponent,
-    PaymentComponent
+    PaymentComponent,
+    AdminListComponent
   ]
 })
 export class AccountModule { }

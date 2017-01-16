@@ -28,3 +28,21 @@ md-list, md-nav-list {
 md-toolbar.section-header {
   @include md-elevation(2);
 }
+
+button {
+  &.sticky-button {
+    position: absolute;
+  }
+  &.top {
+    top: 24px;
+  }
+  &.bottom {
+    bottom: 24px;
+  }
+  &.right {
+    right: 24px;
+  }
+  &.left {
+    left: 24px;
+  }
+}

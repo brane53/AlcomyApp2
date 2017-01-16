@@ -3,4 +3,10 @@
   flex-direction: column;
   flex: 1;
   box-sizing: border-box;
+  position: relative;
+}
+
+.list-container {
+  overflow: auto;
+  height: 100%;
 }

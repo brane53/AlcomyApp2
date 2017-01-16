@@ -11,10 +11,12 @@ import { WorkspaceModule } from './workspace/workspace.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { AccountComponent } from './account/account.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

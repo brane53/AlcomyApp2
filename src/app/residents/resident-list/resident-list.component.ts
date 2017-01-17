@@ -10,12 +10,15 @@ import { Resident } from '../shared/resident';
 })
 export class ResidentListComponent implements OnInit {
   dialogRef: MdDialogRef<NewResidentDialogComponent>;
+
   dialogConfig: MdDialogConfig = {
     disableClose: false,
     width: '600px',
     height: '400px'
   };
+
   newResident: Resident;
+
   residents: Resident[] = [
     {
       firstName: 'Brane',

@@ -5,6 +5,7 @@ import { EmployeeService } from './employee.service';
 import { FacilityService } from './facility.service';
 import { MedicationService } from './medication.service';
 import { ResidentsService } from './residents.service';
+import { ThemeService } from './theme.service';
 import { UserService } from './user.service';
 
 
@@ -14,6 +15,7 @@ import { UserService } from './user.service';
     FacilityService,
     MedicationService,
     ResidentsService,
+    ThemeService,
     UserService
   ]
 })

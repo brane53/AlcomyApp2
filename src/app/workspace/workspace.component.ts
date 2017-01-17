@@ -1,6 +1,6 @@
 import { Component, OnInit, OnChanges, OnDestroy } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { ThemeService } from '../core/theme.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   templateUrl: './workspace.component.html',
@@ -8,32 +8,21 @@ import { Router } from '@angular/router';
 })
 export class WorkspaceComponent implements OnInit, OnDestroy {
   theme: string;
+  themeSubscription: Subscription;
   routerEvents;
 
-  constructor(private router: Router) {}
+  constructor(private themeService: ThemeService) {}
 
   ngOnInit() {
 
-      this.routerEvents = this.router.events.subscribe((val) => {
-        
-        let urlSegments = val.url.split('/');
-
-        if (urlSegments[1] === 'dashboard') {
-          this.theme = 'dashboard-theme';
-        } else if (urlSegments[1] === 'residents') {
-          this.theme = 'residents-theme';
-        } else if (urlSegments[1] === 'staff') {
-          this.theme = 'staff-theme';
-        } else if (urlSegments[1] === 'company') {
-          this.theme = 'company-theme';
-        }
-      });
-
+    this.themeSubscription = this.themeService.currentTheme.subscribe((theme) => {
+      this.theme = theme;
+    });
 
   }
 
   ngOnDestroy() {
-    this.routerEvents.unsubscribe()
+    this.themeSubscription.unsubscribe();
   }
 
   // @temporary - Just used to show off the changing of themes

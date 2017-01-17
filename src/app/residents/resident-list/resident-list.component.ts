@@ -13,8 +13,8 @@ export class ResidentListComponent implements OnInit {
 
   dialogConfig: MdDialogConfig = {
     disableClose: false,
-    width: '600px',
-    height: '400px'
+    width: '',
+    height: ''
   };
 
   newResident: Resident;

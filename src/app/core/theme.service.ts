@@ -6,14 +6,28 @@ import { Location } from '@angular/common';
 @Injectable()
 export class ThemeService {
 
-  currentTheme: Subject<string>;
+  currentTheme: Subject<string> = new BehaviorSubject<string>(null);
 
-  constructor(private router: Router,
-              private route: ActivatedRoute,
-              private location: Location) { }
+  constructor(private router: Router) {
+    this.router.events.subscribe((val) => {
 
-  changeTheme(theme: string){
-    this.currentTheme = theme;
+      let urlSegments = val.url.split('/');
+
+      if (urlSegments[1] === 'dashboard') {
+        this.setTheme('dashboard-theme');
+      } else if (urlSegments[1] === 'residents') {
+        this.setTheme('residents-theme');
+      } else if (urlSegments[1] === 'staff') {
+        this.setTheme('staff-theme');
+      } else if (urlSegments[1] === 'company') {
+        this.setTheme('company-theme');
+      }
+
+    });
+  }
+
+  setTheme(theme: string): void {
+    this.currentTheme.next(theme);
   }
 
 

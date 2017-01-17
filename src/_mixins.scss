@@ -9,7 +9,7 @@
     flex: 1;
     box-sizing: border-box;
   }
-
+  
   @media ($md-xsmall) and (orientation: portrait){
     :host {
       flex-direction: column;
@@ -22,4 +22,11 @@
     }
   }
 
+}
+
+@mixin flex-component($direction){
+  display: flex;
+  flex-direction: direction;
+  flex: 1;
+  box-sizing: border-box;
 }

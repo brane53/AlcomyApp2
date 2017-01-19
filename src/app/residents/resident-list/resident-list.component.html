@@ -3,7 +3,7 @@
 </md-toolbar>
 
 <md-nav-list class="list-container">
-  <div *ngFor="let resident of residents">
+  <div *ngFor="let resident of residents | async">
     <md-list-item >
       <img md-list-avatar [src]="resident.imageUrl" alt="">
       <a md-line>{{resident.firstName}} {{resident.lastName}}</a>

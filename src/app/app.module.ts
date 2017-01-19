@@ -1,17 +1,21 @@
+// Angular Modules
+import { AngularFireModule } from 'angularfire2';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { HttpModule } from '@angular/http';
-import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
-import { CoreModule } from './core/core.module';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { NgModule } from '@angular/core';
+import { MaterialModule } from '@angular/material';
+import { RouterModule } from '@angular/router';
+// Firebase Configuration for Alcomy
+import { firebaseConfig } from './utils/firebase.config';
+// Alcomy Modules
 import { AppRoutingModule } from './app-routing.module';
-import { WorkspaceModule } from './workspace/workspace.module';
-import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-import { AccountComponent } from './account/account.component';
+import { WorkspaceModule } from './workspace/workspace.module';
+// App Module Components
+import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 
 @NgModule({
@@ -20,11 +24,12 @@ import { LoginComponent } from './login/login.component';
     LoginComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(firebaseConfig),
     BrowserModule,
     CoreModule,
+    FlexLayoutModule.forRoot(),
     FormsModule,
     MaterialModule.forRoot(),
-    FlexLayoutModule.forRoot(),
     AppRoutingModule,
     SharedModule,
     WorkspaceModule

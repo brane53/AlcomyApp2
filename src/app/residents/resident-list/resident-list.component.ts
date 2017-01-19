@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MdDialog, MdDialogRef, MdDialogConfig } from '@angular/material';
+import { FirebaseListObservable } from 'angularfire2';
 import { NewResidentDialogComponent } from '../../shared/new-resident-dialog/new-resident-dialog.component';
+import { ResidentsService } from '../../core/residents.service';
 import { Resident } from '../shared/resident';
 
 @Component({
@@ -16,20 +18,25 @@ export class ResidentListComponent implements OnInit {
     width: '',
     height: ''
   };
-
+  
   newResident: Resident;
 
-  residents: Resident[] = [
-    {
-      firstName: 'Brane',
-      lastName: 'Vrajich',
-      imageUrl: 'assets/images/avatars/brane.jpg'
-    }
-  ];
+  residents: FirebaseListObservable<Resident[]>;
 
-  constructor(public dialog: MdDialog) { }
+  // residents: Resident[] = [
+  //   {
+  //     firstName: 'Brane',
+  //     lastName: 'Vrajich',
+  //     imageUrl: 'assets/images/avatars/brane.jpg'
+  //   }
+  // ];
+
+  constructor(public dialog: MdDialog, private residentsService: ResidentsService) {
+
+  }
 
   ngOnInit() {
+    this.residents = this.residentsService.residentList
   }
 
   openNewResidentForm() {

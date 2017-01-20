@@ -36,7 +36,11 @@ export class ResidentListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.residents = this.residentsService.residentList
+    this.residents = this.residentsService.residentList;
+    console.log('Residents', this.residents);
+    this.residents.subscribe((snap) => {
+      console.log('Snapshot', snap);
+    })
   }
 
   openNewResidentForm() {

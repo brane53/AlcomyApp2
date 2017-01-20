@@ -7,8 +7,8 @@ export class ResidentsService {
 
   residentList: FirebaseListObservable<Resident[]>;
 
-  constructor(af: AngularFire) {
-    this.residentList = af.database.list('/residents');
+  constructor(private af: AngularFire) {
+    this.residentList = this.af.database.list('/residents');
   }
 
   getResidents(){

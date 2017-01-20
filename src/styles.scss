@@ -25,6 +25,11 @@ md-list, md-nav-list {
 
 }
 
+.list-container {
+  overflow: auto;
+  height: 100%;
+}
+
 md-toolbar.section-header {
   @include md-elevation(2);
 }

@@ -1,0 +1,24 @@
+<md-toolbar class="section-header">
+  Facility List
+</md-toolbar>
+
+<md-nav-list class="list-container">
+  <div *ngFor="let facility of facilities | async">
+    <md-list-item >
+      <a md-line>{{facility.name}}</a>
+    </md-list-item>
+    <md-divider></md-divider>
+  </div>
+</md-nav-list>
+
+
+<!--Add New Resident Button-->
+<!--Opens the new resident form in a dialog-->
+<button md-fab 
+  (click)="addFacility({
+      name: 'Ingleside',
+      licenseNumber: '102546532'
+    })"
+  class="sticky-button bottom right">
+  <md-icon>add</md-icon>
+</button>

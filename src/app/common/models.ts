@@ -5,3 +5,10 @@ export abstract class Person {
   lastName: string;
   gender?: string;
 }
+
+export class User {
+  id?: string;
+  email: string;
+  firstName?: string;
+  lastName?: string;
+}

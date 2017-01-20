@@ -3,4 +3,5 @@
 :host {
   @include flex-component(column);
   position: relative;
+  height: 100%;
 }

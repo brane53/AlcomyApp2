@@ -127,6 +127,11 @@ MODELS:
 
   ☐ User
   ☐ Facility
+    - id: string
+    - name: string
+    - licenseNumber: string
+    - createdOn: Date
+
   ☐ Account
   ☐ Note
   ☐ Notification

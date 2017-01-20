@@ -26,7 +26,7 @@
 
 @mixin flex-component($direction){
   display: flex;
-  flex-direction: direction;
+  flex-direction: $direction;
   flex: 1;
   box-sizing: border-box;
 }

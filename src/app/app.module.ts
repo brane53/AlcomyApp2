@@ -17,11 +17,13 @@ import { WorkspaceModule } from './workspace/workspace.module';
 // App Module Components
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { FacilityComponent } from './facility/facility.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    FacilityComponent
   ],
   imports: [
     AngularFireModule.initializeApp(firebaseConfig),

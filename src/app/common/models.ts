@@ -12,3 +12,10 @@ export class User {
   firstName?: string;
   lastName?: string;
 }
+
+export class Facility {
+  id?: string;
+  displayName: string;
+  name?: string;
+  licenseNumber?: string;
+}

@@ -1,0 +1,18 @@
+@import '../../../mixins';
+
+
+[md-dialog-title], md-dialog-content, md-dialog-actions {
+  font-family: roboto;
+}
+
+.dialog-wrapper {
+  @include flex-component(column);
+  height: 100%;
+}
+
+.control-message {
+  &.alert {
+    color: red;
+    font-size: 10px;
+  }
+}

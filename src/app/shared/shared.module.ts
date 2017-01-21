@@ -7,6 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NewResidentDialogComponent } from './new-resident-dialog/new-resident-dialog.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { VerticalToolbarComponent } from './vertical-toolbar/vertical-toolbar.component';
+import { NewFacilityDialogComponent } from './new-facility-dialog/new-facility-dialog.component';
 
 @NgModule({
   imports: [
@@ -18,10 +19,12 @@ import { VerticalToolbarComponent } from './vertical-toolbar/vertical-toolbar.co
   declarations: [
     VerticalToolbarComponent,
     PageNotFoundComponent,
-    NewResidentDialogComponent
+    NewResidentDialogComponent,
+    NewFacilityDialogComponent
   ],
   entryComponents: [
-    NewResidentDialogComponent
+    NewResidentDialogComponent,
+    NewFacilityDialogComponent
   ],
   exports: [
     VerticalToolbarComponent

@@ -8,6 +8,7 @@ import { NewResidentDialogComponent } from './new-resident-dialog/new-resident-d
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { VerticalToolbarComponent } from './vertical-toolbar/vertical-toolbar.component';
 import { NewFacilityDialogComponent } from './new-facility-dialog/new-facility-dialog.component';
+import { AlertMessagesDialogComponent } from './alert-messages/alert-messages.component';
 
 @NgModule({
   imports: [
@@ -20,11 +21,13 @@ import { NewFacilityDialogComponent } from './new-facility-dialog/new-facility-d
     VerticalToolbarComponent,
     PageNotFoundComponent,
     NewResidentDialogComponent,
-    NewFacilityDialogComponent
+    NewFacilityDialogComponent,
+    AlertMessagesDialogComponent
   ],
   entryComponents: [
     NewResidentDialogComponent,
-    NewFacilityDialogComponent
+    NewFacilityDialogComponent,
+    AlertMessagesDialogComponent
   ],
   exports: [
     VerticalToolbarComponent

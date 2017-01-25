@@ -18,4 +18,17 @@ export class Facility {
   displayName: string;
   name?: string;
   licenseNumber?: string;
+
+  constructor(facility: Facility){
+    this.id = facility.id ? facility.id: null;
+    this.name = facility.name;
+    this.displayName = facility.displayName;
+    this.licenseNumber = facility.licenseNumber;
+  }
+}
+
+export class FirebaseError {
+  name?: string;
+  message?: string;
+  code?: string;
 }

@@ -34,15 +34,15 @@
         md-input 
         placeholder="License Number" 
         name="licenseNumber" 
-        [(ngModel)]="facility.licenseName"
+        [(ngModel)]="facility.licenseNumber"
         #licenseNumber="ngModel">
       </md-input-container>
       
     </form>
   </md-dialog-content>
 
-  <md-dialog-actions>
-    <button md-raised-button class="md-primary">CREATE</button>
+  <md-dialog-actions [attr.align]="right">
+    <button md-raised-button class="md-primary" (click)="createFacility()">CREATE</button>
     <button md-button md-dialog-close class="md-primary">CANCEL</button>
   </md-dialog-actions>
 
